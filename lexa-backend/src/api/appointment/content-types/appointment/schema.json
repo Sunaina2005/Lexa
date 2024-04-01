@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appointments",
+  "info": {
+    "singularName": "appointment",
+    "pluralName": "appointments",
+    "displayName": "Appointment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "UserName": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Date": {
+      "type": "string",
+      "required": true
+    },
+    "Time": {
+      "type": "string",
+      "required": true
+    },
+    "Note": {
+      "type": "richtext",
+      "required": true
+    },
+    "hospitals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::hospital.hospital"
+    }
+  }
+}
